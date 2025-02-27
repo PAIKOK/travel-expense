@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Travel Expense Tracker</h2>
+        <form id="expense-form">
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+
+            <label for="place">Place Visited:</label>
+            <input type="text" id="place" required>
+
+            <label for="booking">Booking Cost:</label>
+            <input type="number" id="booking" min="0">
+
+            <label for="travel">Travel Expense:</label>
+            <input type="number" id="travel" min="0">
+
+            <label for="local">Local Travel:</label>
+            <input type="number" id="local" min="0">
+
+            <label for="sightseeing">Sightseeing:</label>
+            <input type="number" id="sightseeing" min="0">
+
+            <label for="food">Food Expense:</label>
+            <input type="number" id="food" min="0">
+
+            <label for="additional-name">Additional Expense Name:</label>
+            <input type="text" id="additional-name" placeholder="e.g., Souvenirs">
+
+            <label for="additional">Additional Expenses:</label>
+            <input type="text" id="additional" name="additional"
+                placeholder="Enter amount or expression (e.g. 900+700)">
+
+            <button type="submit">Add Expense</button>
+        </form>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Place</th>
+                        <th>Booking</th>
+                        <th>Travel</th>
+                        <th>Local</th>
+                        <th>Sightseeing</th>
+                        <th>Food</th>
+                        <th>Additional Name</th>
+                        <th>Additional</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="expense-table">
+                    <!-- Entries will be added dynamically -->
+                </tbody>
+                <tfoot id="daily-total-container">
+                    <tr>
+                        <td colspan="9"><strong>Daily Total</strong></td>
+                        <td id="daily-total">0</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <div id="download-container">
+        <button id="download-btn">Download CSV</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
